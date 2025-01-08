@@ -19,12 +19,14 @@ class VotingAppGUI:
 
         # Custom Colors
         self.bg_color = "#2E3440"  # Dark background
-        self.fg_color = "#D8DEE9"  # Light text
+        self.fg_color = "#D8DEE9"  # Light text (for labels and buttons)
         self.button_bg = "#4C566A"  # Button background
-        self.button_fg = "#ECEFF4"  # Button text
+        self.button_fg = "black"  # White button text (changed here)
         self.hover_bg = "#5E81AC"  # Button hover background
         self.success_color = "#A3BE8C"  # Success messages
         self.error_color = "#BF616A"  # Error messages
+        self.entry_bg = "#3B4252"  # Entry widget background
+        self.entry_fg = "#ECEFF4"  # Entry widget text color
 
         # Configure ttk styles
         self.style = ttk.Style()
@@ -62,12 +64,12 @@ class VotingAppGUI:
 
         # Username
         tk.Label(self.root, text="Username:", font=self.label_font, bg=self.bg_color, fg=self.fg_color).pack()
-        self.register_username = tk.Entry(self.root, font=self.label_font)
+        self.register_username = tk.Entry(self.root, font=self.label_font, bg=self.entry_bg, fg=self.entry_fg, insertbackground=self.entry_fg)
         self.register_username.pack(pady=10)
 
         # Password
         tk.Label(self.root, text="Password:", font=self.label_font, bg=self.bg_color, fg=self.fg_color).pack()
-        self.register_password = tk.Entry(self.root, show="*", font=self.label_font)
+        self.register_password = tk.Entry(self.root, show="*", font=self.label_font, bg=self.entry_bg, fg=self.entry_fg, insertbackground=self.entry_fg)
         self.register_password.pack(pady=10)
 
         # Buttons
@@ -81,12 +83,12 @@ class VotingAppGUI:
 
         # Username
         tk.Label(self.root, text="Username:", font=self.label_font, bg=self.bg_color, fg=self.fg_color).pack()
-        self.login_username = tk.Entry(self.root, font=self.label_font)
+        self.login_username = tk.Entry(self.root, font=self.label_font, bg=self.entry_bg, fg=self.entry_fg, insertbackground=self.entry_fg)
         self.login_username.pack(pady=10)
 
         # Password
         tk.Label(self.root, text="Password:", font=self.label_font, bg=self.bg_color, fg=self.fg_color).pack()
-        self.login_password = tk.Entry(self.root, show="*", font=self.label_font)
+        self.login_password = tk.Entry(self.root, show="*", font=self.label_font, bg=self.entry_bg, fg=self.entry_fg, insertbackground=self.entry_fg)
         self.login_password.pack(pady=10)
 
         # Buttons
