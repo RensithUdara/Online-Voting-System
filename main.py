@@ -1,4 +1,3 @@
-import utils.session
 from gui import VotingAppGUI
 import tkinter as tk
 from database import initialize_database
